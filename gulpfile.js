@@ -4,36 +4,22 @@ const gulp = require('gulp');
 
 const { parallel } = require('gulp');
 
-// minify html files
-const htmlmin = require('gulp-htmlmin');
+/*********************************Start Import Tasks*********************************************/
 
-// minify css files
-const cleanCSS = require('gulp-clean-css');
+// ! minify html files
+const minHtml = require("./gulp/tasks/minHtml.js")
 
-// notify mesaages
+// ! minify css files
+const minCss = require("./gulp/tasks/minCss.js");
 
-const notify = require("gulp-notify");
+// ! Watch File if it had changed and perform action given to it
+const watchFiles = require("./gulp/tasks/watchFiles.js");
 
-function minHtml() {
-	return gulp.src('src/*.html')
-    .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest('build'));
-}
-
-function minCss() {
-	return gulp.src('src/css/*.css')
-    .pipe(cleanCSS({compatibility: 'ie8'}))
-    .pipe(gulp.dest('build/css'));
-}
-
-function watchFiles() {
-	gulp.watch(["src/css/*.css"], minCss);
-	gulp.watch(["src/*.html"], minHtml);
-	
-}
+/*********************************End Import Tasks**********************************************/
 
 function main() {
-	watchFiles()
+	watchFiles(["src/css/*.css"], minCss);
+	watchFiles(["src/*.html"], minHtml);
 }
 
 exports.default = main;

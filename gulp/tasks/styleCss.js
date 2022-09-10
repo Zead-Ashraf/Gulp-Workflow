@@ -16,7 +16,7 @@ const cleanCSS = require('gulp-clean-css');
 const autoprefixer = require('gulp-autoprefixer');
 
 // ! Concat Files
-const concat = require('gulp-concat');
+const concatCss = require('gulp-concat-css');
 /************************End Import modules********************************/
 
 function styleCss() {
@@ -30,13 +30,13 @@ function styleCss() {
             }
         )
     )
+    // ? concat all css Files into one file
+    /* ! you need to keep your (href) of the (rel) element **Compatiable** with this name*/
+    .pipe(concatCss('style.min.css'))
     // ? perform minifiying
     .pipe(
         cleanCSS({compatibility: 'ie8'})
     )
-    // ? concat all css Files into one file
-    /* ! you need to keep your (href) of the (rel) element **Compatiable** with this name*/
-    .pipe(concat('style.min.css'))
     // ? output Files
     .pipe(gulp.dest('build/css'));
 }

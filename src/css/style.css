@@ -1,4 +1,4 @@
-ar {
+body {
 	display: flex;
 	height: 100%;
 	padding: 0;
@@ -8,38 +8,7 @@ ar {
 
 /******************************************************************************/
 
-ass {
-	width: 47%;
-	text-align: center;
-	margin: auto;
-}
 
-
-header h1 {
-	font-size: 2.5rem;
-	font-family: "Poppins",serif;
-	font-weight: 200;
-	color: hsl(229, 6%, 66%);
-	margin-bottom: 10px;
-
-}
-
-
-header h2 {
-	font-size: 2.5rem;
-	font-family: "Poppins",serif;
-	color: hsl(234, 12%, 34%);
-	margin-top: 0;
-	margin-bottom: 15px;
-}
-
-
-header p {
-	font-size: 1.1rem;
-	font-family: "Poppins",serif;
-	color: hsl(229, 6%, 66%);
-	font-weight: 400;
-}
 
 
 

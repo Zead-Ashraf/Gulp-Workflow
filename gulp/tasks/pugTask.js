@@ -10,13 +10,12 @@ const gulp = require('gulp');
 // ! Watch File if it had changed and perform action given to it
 const watchFiles = require("./watchFiles.js");
 
-// ! Supportpug syntax and compiling
+// ! Support pug syntax and compiling
 const pugModule = require('gulp-pug');
 
 /************************End Import modules********************************/
 
 function supportPug() {
-	// ? watch the file
 	// ! you can use files from other pathes as (pug modules) as it won't be compiled
 	return gulp.src('./src/*.pug')
     .pipe(
@@ -25,6 +24,8 @@ function supportPug() {
     .pipe(gulp.dest('./build'));
 }
 
+// ! add pug task
 gulp.task("pug", () => {
+  // ! watch pug files
 	watchFiles(['./src/*.pug'], supportPug)
 });

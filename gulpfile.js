@@ -17,6 +17,9 @@ const watchFiles = require("./gulp/tasks/watchFiles.js");
 
 /*********************************End Import Tasks**********************************************/
 
+// ! impoerting Pug Script
+require("./gulp/tasks/pugTask.js");
+
 function main() {
 	watchFiles(["src/css/*.css"], styleCss);
 	watchFiles(["src/*.html"], minHtml);

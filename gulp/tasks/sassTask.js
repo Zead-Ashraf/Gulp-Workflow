@@ -1,5 +1,5 @@
 // * What this script do :
-    // ? add sass support using (pug task)
+    // ? add sass support using (sass task)
     // ? call it using (sass task)
 
 /************************Start Import modules********************************/
@@ -21,8 +21,8 @@ function supportSass() {
     .pipe(gulp.dest('./build/css'));
 };
 
-// ! add pug task
+// ! add sass task
 gulp.task("scss", () => {
-    // ! watch pug files
+    // ! watch sass files
 	watchFiles(["./src/sass/*.scss"], supportSass)
 });

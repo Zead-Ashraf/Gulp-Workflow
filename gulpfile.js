@@ -2,7 +2,7 @@
 
 const gulp = require('gulp');
 
-const { parallel } = require('gulp');
+const { parallel , series } = require('gulp');
 
 /*********************************Start Import Tasks*********************************************/
 
@@ -15,6 +15,8 @@ const styleCss = require("./gulp/tasks/styleCss.js");
 // ! Watch File if it had changed and perform action given to it
 const watchFiles = require("./gulp/tasks/watchFiles.js");
 
+const combineCss = require("./gulp/tasks/combineCss.js");
+
 /*********************************End Import Tasks**********************************************/
 
 // ! impoerting Pug Script
@@ -25,8 +27,8 @@ require("./gulp/tasks/sassTask.js");
 
 
 function main() {
-	watchFiles(["src/css/*.css"], styleCss);
 	watchFiles(["src/*.html"], minHtml);
+	watchFiles(["src/css/*.css"], series(styleCss,combineCss));
 }
 
 // ! when you want to achive an other task you need to call (defualt) task by name

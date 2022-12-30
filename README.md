@@ -8,7 +8,7 @@
  - [x] Performs useful operations on css file
    - [x] autoprefixing
    - [x] minifiying
-   - [ ] concat all css Files into one file
+   - [x] concat all css Files into one file
 
 - [x] watch Files and perform all tasks automatically on saving
 

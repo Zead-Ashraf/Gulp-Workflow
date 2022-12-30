@@ -1,0 +1,261 @@
+header {
+  width: 47%;
+  text-align: center;
+  margin: auto;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-family: "Poppins",serif;
+  font-weight: 200;
+  color: hsl(229, 6%, 66%);
+  margin-bottom: 10px;
+}
+
+header h2 .sad {
+  font-size: 2.5rem;
+  font-family: "Poppins",serif;
+  color: hsl(234, 12%, 34%);
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+header p {
+  font-size: 1.1rem;
+  font-family: "Poppins",serif;
+  color: hsl(229, 6%, 66%);
+  font-weight: 40;
+}
+body {
+  display: flex;
+  height: 100%;
+  padding: 0;
+  font-size: 15px;
+}
+
+/******************************************************************************/
+
+/******************************************************************************/
+
+main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 50px 15px;
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+/******************************************************************************/
+
+main div {
+  width: 90%;
+  height: 250px;
+  box-shadow: 0px 0px 20px 0px darkgray;
+  padding-left: 2em;
+  border-radius: 2%;
+}
+
+main div:nth-child(1) {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+  border-top: 4px solid hsl(0, 78%, 62%);
+}
+
+main div:nth-child(2) {
+  grid-column: 1 / 2;
+  grid-row: 2 / 4;
+  border-top: 4px solid hsl(180, 62%, 55%);
+}
+
+main div:nth-child(3) {
+  grid-column: 3 / -1;
+  grid-row: 2 / 4;
+  border-top: 4px solid hsl(212, 86%, 64%);
+}
+
+main div:nth-child(4) {
+  grid-column: 2 / 3;
+  grid-row: 3 / 5;
+  border-top: 4px solid  hsl(34, 97%, 64%);
+  margin-bottom: 3em;
+}
+
+/******************************** adsadsads ********************************************/
+
+main div h3 {
+  font-size: 1.5rem;
+  font-family: "Poppins",serif;
+  color: hsl(234, 12%, 34%);
+  margin-bottom: 15px;
+}
+
+main div p {
+  width: 84%;
+  font-size: 1.15rem;
+  font-family: "Poppins",serif;
+  color: hsl(229, 6%, 66%);
+  line-height: 1.4em;
+  font-weight: 400;
+}
+
+img {
+  float: right;
+  padding: 1em 2em 0 0;
+}
+
+/******************************************************************************/
+
+@media (max-width: 767px) {
+  main {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4 ,1fr);
+    grid-gap: 0px;
+  }
+
+  header {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+  }
+
+  header h1 {
+    font-size: 1.7rem;
+    font-family: "Poppins",serif;
+    color: hsl(229, 6%, 66%);
+    margin-bottom: 10px;
+  }
+
+  header h2 {
+    font-size: 1.8rem;
+    font-family: "Poppins",serif;
+    color: hsl(234, 12%, 34%);
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  header p {
+    font-size: 1.1rem;
+    font-family: "Poppins",serif;
+    color: hsl(229, 6%, 66%);
+    margin-top: 0;
+  }
+
+  main div {
+    margin: auto;
+  }
+
+  main div:nth-child(1) {
+    grid-column: 1;
+    grid-row: 2 / 3;
+    border-top: 4px solid hsl(0, 78%, 62%);
+  }
+
+  main div:nth-child(2) {
+    grid-column: 1;
+    grid-row: 1 / 2;
+    border-top: 4px solid hsl(180, 62%, 55%);
+  }
+
+  main div:nth-child(3) {
+    grid-column: 1;
+    grid-row: 4 / 5;
+    border-top: 4px solid hsl(212, 86%, 64%);
+    margin-top: 0;
+  }
+
+  main div:nth-child(4) {
+    grid-column: 1;
+    grid-row: 3 / 4;
+    border-top: 4px solid  hsl(34, 97%, 64%);
+    margin-bottom: 2em;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  main {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4 ,1fr);
+    grid-gap: 0px;
+  }
+
+  header {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+  }
+
+  header h1 {
+    font-size: 3rem;
+    font-family: "Poppins",serif;
+    color: hsl(229, 6%, 66%);
+    margin-bottom: 10px;
+  }
+
+  header h2 {
+    font-size: 3rem;
+    font-family: "Poppins",serif;
+    color: hsl(234, 12%, 34%);
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  header p {
+    font-size: 2rem;
+    font-family: "Poppins",serif;
+    color: hsl(229, 6%, 66%);
+    margin-top: 0;
+  }
+
+  main div {
+    margin: auto;
+  }
+
+  main div:nth-child(1) {
+    grid-column: 1;
+    grid-row: 2 / 3;
+    border-top: 4px solid hsl(0, 78%, 62%);
+  }
+
+  main div:nth-child(2) {
+    grid-column: 1;
+    grid-row: 1 / 2;
+    border-top: 4px solid hsl(180, 62%, 55%);
+  }
+
+  main div:nth-child(3) {
+    grid-column: 1;
+    grid-row: 4 / 5;
+    border-top: 4px solid hsl(212, 86%, 64%);
+    margin-top: 0;
+  }
+
+  main div:nth-child(4) {
+    grid-column: 1;
+    grid-row: 3 / 4;
+    border-top: 4px solid  hsl(34, 97%, 64%);
+    margin-bottom: 2em;
+  }
+
+  main div h3 {
+    font-size: 2.2rem;
+    font-family: "Poppins",serif;
+    color: hsl(234, 12%, 34%);
+    margin-bottom: 10px;
+  }
+
+  main div p {
+    width: 84%;
+    font-size: 2rem;
+    font-family: "Poppins",serif;
+    color: hsl(229, 6%, 66%);
+    line-height: 1.4em;
+    margin-top: 5px;
+    margin-bottom: 0;
+  }
+
+  img {
+    float: right;
+    padding: 0 2em 0 0;
+  }
+}

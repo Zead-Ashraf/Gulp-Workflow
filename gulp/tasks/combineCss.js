@@ -1,9 +1,3 @@
-// * What this script do :
-    // ? perform autoprefixing
-    // ? perform minifiying
-    // ? concat all css Files into one file
-/*****************************************************************************/
-
 /************************Start Import modules********************************/
 // const { dest, series, src, task, watch } = require('gulp');
 
@@ -19,13 +13,25 @@ const autoprefixer = require('gulp-autoprefixer');
 const concatCss = require('gulp-concat-css');
 /************************End Import modules********************************/
 
-function styleCss() {
-    // ? scrap all (src) css files
-    return gulp.src('src/css/*.css')
+function combineCss() {
+	// ? scrap all (src) css files
+    return gulp.src('src/harbor/css/*.css')
     // ? concat all css Files into one file
-    .pipe(concatCss('temp.min.css'))
+    .pipe(concatCss('style.min.css'))
+    // ? perform autoprefixing
+    .pipe(
+        autoprefixer(
+            { 
+                grid: "autoplace"
+            }
+        )
+    )
+    // ? perform minifiying
+    .pipe(
+        cleanCSS({compatibility: 'ie8'})
+    )
     // ? output Files
-    .pipe(gulp.dest('src/harbor/css'));
+    .pipe(gulp.dest('build/css'));
 }
 
-module.exports = styleCss;
+module.exports = combineCss;
